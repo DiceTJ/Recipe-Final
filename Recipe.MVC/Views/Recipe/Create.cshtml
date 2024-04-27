@@ -1,0 +1,52 @@
+﻿@model Recipe.Library.Models.Recipe
+
+@{
+	ViewBag.Title = "Create";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+	<div class="form-horizontal">
+		<h4>Student</h4>
+		<hr />
+		@Html.ValidationSummary(true, "", new { @class = "text-danger"})
+
+		<div class="form-group">
+			@Html.LabelFor(model => model.RecipeName, htmlAttributes: new { @class = "control-label col-md-2"})
+			<div class="col-md-10">
+				@Html.EditorFor(model => model.RecipeName, new { htmlAttribtues = new {@class = "form-control"}})
+				@Html.ValidationMessageFor(model => model.RecipeName, "", new { @class = "text-danger"})
+			</div>
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(model => model.RecipeNotes, htmlAttributes: new {@class = "control.label col-md-2"})
+			<div class="col-md-10">
+				@Html.EditorFor(model => model.RecipeNotes, new {htmlAttributes = new{@class = "form-control"}})
+				@Html.ValidationMessageFor(model => model.RecipeNotes,"", new { @class = "text-danger"})
+			</div>
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(model => model.RecipeInstructions, htmlAttributes: new{@class = "control-label col-md-2"})
+
+			<div class="col-md-10">
+				@Html.EditorFor(model => model.RecipeInstructions, new {htmlAttributes = new {@class = "form-control"}})
+				@Html.ValidationMessageFor(model => model.RecipeInstructions,"", new {@class="text-danger"})
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<div class="col-md-offset-2 col-md-10">
+				<input type="submit" value="Save" class="btn btn-default" />
+			</div>
+		</div>
+	</div>
+}
+
+<div>
+	@Html.ActionLink("Back to List", "Index")
+</div>
