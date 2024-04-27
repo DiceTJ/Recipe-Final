@@ -21,7 +21,7 @@ public partial class DataContext : DbContext
     public virtual DbSet<Models.Recipe> Recipes { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlite("Data Source=C:\\Recipe\\Recipe.db");
+        => optionsBuilder.UseSqlite("Data Source=C:\\Users\\tydi4\\source\\repos\\Recipe\\Recipe.Library\\Recipe.Library\\Database\\Recipe.db"); //Please replace this path with your local path
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

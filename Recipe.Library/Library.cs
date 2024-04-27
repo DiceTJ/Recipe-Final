@@ -19,7 +19,7 @@ namespace Recipe.Library
             }
             catch (Exception ex)
             {
-                throw new Exception("An error occurred: " + ex.Message);
+                throw new Exception("An error occurred: " + ex.Message);  //Getting a SQLite Error? Check line 24 in DataContext.cs
             }
             return list;
         }
