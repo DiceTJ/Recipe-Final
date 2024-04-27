@@ -30,8 +30,7 @@ namespace Recipe.MVC.Controllers
         [HttpPost]
         public IActionResult Create(Library.Models.Recipe rec)
         {
-            Recipe.Library.Models.Recipe recipeItem = new
-               Recipe.Library.Models.Recipe()
+            Recipe.Library.Models.Recipe recipeItem = new Recipe.Library.Models.Recipe()
             {
                 RecipeName = rec.RecipeName,
                 RecipeNotes = rec.RecipeNotes,
